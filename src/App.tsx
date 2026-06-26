@@ -4,12 +4,15 @@ import ScrollOverlaySections from "./components/ScrollOverlaySections";
 
 export default function App() {
   return (
-    <main className="relative bg-[#001f1f] text-white">
+    <div className="relative isolate min-h-screen overflow-x-clip bg-white">
       <Navbar />
-      <Hero />
-      <ScrollOverlaySections />
-      
-      
-    </main>
+
+      <main className="relative">
+        <div className="sticky top-0 z-0 min-h-screen overflow-hidden">
+          <Hero />
+        </div>
+        <ScrollOverlaySections />
+      </main>
+    </div>
   );
 }

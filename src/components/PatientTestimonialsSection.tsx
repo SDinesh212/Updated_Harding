@@ -1,100 +1,172 @@
-import { ArrowRightCircle } from "lucide-react";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { testimonials } from "../data/landing";
 
-const testimonials = [
-  {
-    name: "Jessica Smith",
-    role: "UX Designer At Clay Studio",
-    text: "I had my MRI done at the Radiology Center at Harding and the experience was excellent. The staff explained everything clearly and helped ease my anxiety. The open MRI was surprisingly comfortable and not claustrophobic at all.",
-  },
-  {
-    name: "Maria Johnson",
-    role: "Retired Teacher",
-    text: "I came in for a CT scan feeling very nervous, but the team at Harding made the entire process smooth and stress-free. They walked me through every step and the results were ready quickly.",
-  },
-  {
-    name: "Jessica Smith",
-    role: "UX Designer At Clay Studio",
-    text: "I had my MRI done at the Radiology Center at Harding and the experience was excellent. The staff explained everything clearly and helped ease my anxiety. The open MRI was surprisingly comfortable and not claustrophobic at all.",
-  },
-];
+const floatingTags = ["Comfortable Visit", "Fast Results", "Trusted Team"];
 
 export default function PatientTestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setActiveIndex((current) => (current + 1) % testimonials.length);
+  }, []);
+
+  const previousTestimonial = () => {
+    setActiveIndex(
+      (current) => (current - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   useEffect(() => {
-    const timer = setInterval(nextTestimonial, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    const timer = window.setInterval(nextTestimonial, 5000);
+    return () => window.clearInterval(timer);
+  }, [nextTestimonial]);
 
   const active = testimonials[activeIndex];
 
   return (
-    <section className="relative z-[70] bg-white px-4 py-20 sm:px-6 lg:py-24">
-      <div className="mx-auto max-w-[1120px] text-center">
-        <h2 className="text-[32px] font-bold text-[#285573] sm:text-[46px]">
-          What Our Patients Say
-        </h2>
+    <section className="relative overflow-hidden bg-[#eef9fc] px-4 py-24 text-[#12383d] sm:px-6 lg:py-32">
+     
 
-        <p className="mt-5 text-[18px] text-[#285573] sm:text-[22px]">
-          Our Multiple Scans Have Made Quite An Impact
-        </p>
+      <div className="relative mx-auto max-w-[1240px]">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-[780px] text-center"
+        >
+          <p className="inline-flex rounded-full bg-white px-4 py-2 text-[13px] font-bold uppercase tracking-[0.22em] text-[#1e9c92] shadow-sm">
+            Patient Stories
+          </p>
 
-        <div className="mt-12 grid overflow-hidden rounded-[8px] bg-[#eef8f6] sm:mt-14 lg:grid-cols-2">
-          <div className="relative min-h-[320px] sm:min-h-[360px]">
+          <h2 className="mt-5 text-[38px] font-extrabold leading-tight tracking-[-0.03em] text-[#12383d] sm:text-[56px]">
+            What patients say about their care.
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-[640px] text-[17px] leading-8 text-[#416878]">
+            Real experiences from patients who trusted Harding Radiology for
+            comfortable imaging, clear communication, and reliable results.
+          </p>
+        </motion.div>
+
+        <div className="mt-16 grid overflow-hidden rounded-[42px] bg-white shadow-[0_34px_90px_rgba(40,85,115,0.14)] lg:grid-cols-[0.95fr_1.05fr]">
+          <motion.div
+            initial={{ opacity: 0, x: -26 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6 }}
+            className="relative min-h-[520px] overflow-hidden bg-[#0b2f3a]"
+          >
             <img
               src="/patient-review.jpg"
-              alt="Happy patient"
-              className="h-full w-full object-cover"
+              alt="Smiling patient at radiology appointment"
+              className="h-full w-full object-cover opacity-90 transition duration-700 hover:scale-105"
             />
 
-            <span className="absolute left-[24px] top-[130px] rounded-full bg-white px-4 py-2 text-[12px] font-bold text-black sm:left-[40px] sm:top-[155px] sm:text-[13px]">
-              Happy Patient
-            </span>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#082f35]/70 via-transparent to-transparent" />
 
-            <span className="absolute bottom-[70px] left-[90px] rounded-full bg-white px-4 py-2 text-[12px] font-bold text-black sm:bottom-[80px] sm:left-[140px] sm:text-[13px]">
-              Dedicated Team
-            </span>
-
-            <span className="absolute right-[20px] top-[205px] rounded-full bg-white px-4 py-2 text-[12px] font-bold text-black sm:right-[35px] sm:top-[215px] sm:text-[13px]">
-              Good Service
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center justify-center px-6 py-10 text-center sm:px-8 sm:py-12">
-            <img
-              src="/patient-avatar.jpg"
-              alt="Patient"
-              className="h-[72px] w-[72px] rounded-full object-cover"
-            />
-
-            <p className="mt-8 max-w-[420px] text-[15px] leading-[1.8] text-[#285573]">
-              {active.text}
-            </p>
-
-            <div className="mt-10 flex w-full max-w-[420px] items-center justify-center gap-10">
-              <div>
-                <h3 className="text-[20px] font-medium text-[#285573]">
-                  {active.name}
-                </h3>
-
-                <p className="mt-2 text-[14px] text-gray-500">
-                  {active.role}
-                </p>
+            <div className="absolute left-6 top-6 rounded-[24px] border border-white/20 bg-white/15 p-5 text-white shadow-[0_20px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+              <div className="flex gap-1 text-[#46d7c8]">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <Star key={index} size={18} fill="currentColor" />
+                ))}
               </div>
+              <p className="mt-3 text-[14px] font-bold">5-star patient care</p>
+            </div>
 
-              <button
-                type="button"
-                onClick={nextTestimonial}
-                aria-label="Next testimonial"
-                className="text-[#2f86d1] transition hover:scale-110"
+            {floatingTags.map((tag, index) => (
+              <motion.span
+                key={tag}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.18 + index * 0.08 }}
+                className={`absolute rounded-full border border-white/70 bg-white/90 px-4 py-2 text-[12px] font-bold text-[#12383d] shadow-[0_16px_36px_rgba(23,56,59,0.16)] backdrop-blur ${
+                  index === 0
+                    ? "right-8 top-28"
+                    : index === 1
+                      ? "left-8 bottom-28"
+                      : "right-10 bottom-12"
+                }`}
               >
-                <ArrowRightCircle size={38} strokeWidth={2.4} />
-              </button>
+                {tag}
+              </motion.span>
+            ))}
+          </motion.div>
+
+          <div className="relative flex min-h-[520px] flex-col justify-center bg-[#eef9fc] px-7 py-10 sm:px-12 lg:px-14">
+            <div className="absolute right-10 top-10 text-[#46d7c8]/20">
+              <Quote size={90} fill="currentColor" />
+            </div>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active.name}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -18 }}
+                transition={{ duration: 0.32 }}
+                className="relative z-10"
+              >
+                <img
+                  src={active.avatar}
+                  alt={`${active.name} avatar`}
+                  className="h-[76px] w-[76px] rounded-full border-4 border-white object-cover shadow-[0_16px_38px_rgba(40,85,115,0.18)]"
+                />
+
+                <p className="mt-8 max-w-[620px] text-[22px] font-medium leading-10 text-[#285573]">
+                  “{active.text}”
+                </p>
+
+                <div className="mt-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                  <div>
+                    <h3 className="text-[24px] font-extrabold text-[#12383d]">
+                      {active.name}
+                    </h3>
+                    <p className="mt-1 text-[15px] font-bold text-[#1e9c92]">
+                      {active.role}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={previousTestimonial}
+                      aria-label="Previous testimonial"
+                      className="inline-flex h-[52px] w-[52px] items-center justify-center rounded-full border border-[#285573]/15 bg-white text-[#285573] shadow-[0_14px_34px_rgba(40,85,115,0.12)] transition hover:-translate-y-1 hover:bg-[#285573] hover:text-white"
+                    >
+                      <ArrowLeft size={21} />
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={nextTestimonial}
+                      aria-label="Next testimonial"
+                      className="inline-flex h-[52px] w-[52px] items-center justify-center rounded-full bg-[#285573] text-white shadow-[0_16px_40px_rgba(40,85,115,0.22)] transition hover:-translate-y-1 hover:bg-[#17383b]"
+                    >
+                      <ArrowRight size={21} />
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            <div className="mt-10 flex gap-2">
+              {testimonials.map((item, index) => (
+                <button
+                  key={item.name}
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  aria-label={`Show testimonial ${index + 1}`}
+                  className={`h-2.5 rounded-full transition-all ${
+                    activeIndex === index
+                      ? "w-10 bg-[#1e9c92]"
+                      : "w-2.5 bg-[#285573]/20"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
