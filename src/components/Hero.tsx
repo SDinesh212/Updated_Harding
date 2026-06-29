@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-[#eef8f1] px-4 pt-28 text-[#12383d] sm:px-6 lg:px-8"
+      className="relative min-h-screen overflow-hidden bg-[#eef8f1] px-4 pb-14 pt-28 text-[#12383d] sm:px-6 sm:pb-16 lg:px-8"
     >
       {/* Background video */}
       <video
@@ -66,7 +66,7 @@ export default function Hero() {
         className="absolute -right-52 top-10 z-[2] h-[620px] w-[620px] rounded-full bg-[#e7f8ec]/28 blur-3xl"
       />
 
-      <div className="relative z-10 mx-auto grid min-h-[calc(100vh-112px)] max-w-[1360px] items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
+      <div className="relative z-10 mx-auto grid min-h-[calc(100svh-112px)] max-w-[1360px] items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
         {/* Content */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -74,12 +74,12 @@ export default function Hero() {
           transition={{ duration: 0.75 }}
           className="max-w-[690px]"
         >
-          <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#a6dfb8] bg-white/60 px-5 py-2.5 text-[13px] font-extrabold uppercase tracking-wide text-[#0d9b5d] shadow-sm backdrop-blur-xl">
+          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-[#a6dfb8] bg-white/60 px-4 py-2.5 text-[12px] font-extrabold uppercase tracking-wide text-[#0d9b5d] shadow-sm backdrop-blur-xl sm:mb-7 sm:gap-3 sm:px-5 sm:text-[13px]">
             <ScanLine size={18} />
             Whole-Body MRI
           </div>
 
-          <h1 className="font-serif text-[42px] font-black leading-[1.28] tracking-[-0.035em] text-[#143f35] sm:text-[56px] lg:text-[52px]">
+          <h1 className="font-serif text-[36px] font-black leading-[1.18] text-[#143f35] sm:text-[52px] sm:leading-[1.2] lg:text-[52px]">
             <span className="block">Preventive Health,</span>
             <span className="block">Reimagined With</span>
 
@@ -90,14 +90,14 @@ export default function Hero() {
             <span className="block">now available at Harding.</span>
           </h1>
 
-          <p className="mt-7 max-w-[560px] text-[18px] leading-[1.8] text-[#3e665c] sm:text-[20px]">
+          <p className="mt-6 max-w-[560px] text-[16px] leading-7 text-[#3e665c] sm:mt-7 sm:text-[20px] sm:leading-[1.8]">
             A radiation-free, non-invasive scan covering brain to pelvis in a
             single session.
           </p>
 
           <a
             href="#contact"
-            className="mt-10 inline-flex h-[62px] items-center gap-3 rounded-xl bg-[#143f35] px-8 text-[17px] font-bold text-white shadow-[0_22px_50px_rgba(7,148,84,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#0f3028] hover:shadow-[0_28px_70px_rgba(7,148,84,0.34)]"
+            className="mt-8 inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-xl bg-[#143f35] px-6 text-center text-[15px] font-bold text-white shadow-[0_22px_50px_rgba(7,148,84,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#0f3028] hover:shadow-[0_28px_70px_rgba(7,148,84,0.34)] sm:mt-10 sm:w-auto sm:min-h-[62px] sm:px-8 sm:text-[17px]"
           >
             Book Your Appointment
           </a>

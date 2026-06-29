@@ -151,8 +151,7 @@ export default function Navbar() {
             isScrolled || isMenuOpen
               ? "bg-transparent"
               : "bg-[#082f35] shadow-[0_18px_44px_rgba(5,31,39,0.24)]"
-          }`}
-        >
+          }`}>
           <img
             src="/logo.png"
             alt="Radiology Center at Harding"

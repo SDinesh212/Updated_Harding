@@ -21,7 +21,7 @@ const highlights = [
 
 export default function DiagnosticExcellenceSection() {
   return (
-    <section className="relative overflow-hidden bg-[#eef9fc] px-4 py-24 text-[#12383d] sm:px-6 lg:py-32">
+    <section className="relative overflow-hidden bg-[#eef9fc] px-4 py-20 text-[#12383d] sm:px-6 sm:py-24 lg:py-32">
       
 
       <div className="relative mx-auto grid max-w-[1240px] items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
@@ -35,24 +35,24 @@ export default function DiagnosticExcellenceSection() {
             Diagnostic Excellence
           </p>
 
-          <h2 className="mt-6 text-[40px] font-extrabold leading-tight tracking-[-0.04em] text-[#12383d] sm:text-[56px] lg:text-[68px]">
+          <h2 className="mt-6 text-[34px] font-extrabold leading-tight text-[#12383d] sm:text-[54px] lg:text-[68px]">
             Precision imaging,
             <br />
             trusted since 1989.
           </h2>
 
-          <h3 className="mt-6 max-w-[620px] text-[22px] font-extrabold leading-tight text-[#285573]">
+          <h3 className="mt-5 max-w-[620px] text-[20px] font-extrabold leading-tight text-[#285573] sm:mt-6 sm:text-[22px]">
             Independent outpatient imaging backed by decades of clinical
             confidence.
           </h3>
 
-          <p className="mt-5 max-w-[640px] text-[17px] leading-8 text-[#416878]">
+          <p className="mt-5 max-w-[640px] text-[16px] leading-7 text-[#416878] sm:text-[17px] sm:leading-8">
             Radiology Center at Harding provides respectful care, accurate
             results, and advanced imaging access close to home for Morris County
             patients and referring physicians.
           </p>
 
-          <div className="mt-9 grid gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-9 sm:grid-cols-3">
             {highlights.map((item) => {
               const Icon = item.icon;
 
@@ -85,8 +85,8 @@ export default function DiagnosticExcellenceSection() {
         >
           
 
-          <div className="relative overflow-hidden rounded-[42px] bg-[#081f27] p-3">
-            <div className="relative aspect-video overflow-hidden rounded-[32px]">
+          <div className="relative overflow-hidden rounded-[28px] bg-[#081f27] p-2.5 sm:rounded-[42px] sm:p-3">
+            <div className="relative aspect-video overflow-hidden rounded-[22px] sm:rounded-[32px]">
               <iframe
                 src="https://www.youtube.com/embed/eDTjxS5OKh0?si=Ct4bWu4Ho-m_1--6"
                 title="Radiology Center at Harding video"
@@ -104,11 +104,11 @@ export default function DiagnosticExcellenceSection() {
             </div>
           </div>
 
-          <div className="absolute -bottom-8 left-8 right-8 rounded-[26px] border border-white/80 bg-white/90 p-5 shadow-[0_24px_60px_rgba(40,85,115,0.16)] backdrop-blur-xl">
+          <div className="mt-4 rounded-[22px] border border-white/80 bg-white/90 p-4 shadow-[0_24px_60px_rgba(40,85,115,0.16)] backdrop-blur-xl sm:absolute sm:-bottom-8 sm:left-8 sm:right-8 sm:mt-0 sm:rounded-[26px] sm:p-5">
             <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[#1e9c92]">
               Patient-first standards
             </p>
-            <p className="mt-2 text-[22px] font-extrabold leading-tight text-[#12383d]">
+            <p className="mt-2 text-[19px] font-extrabold leading-tight text-[#12383d] sm:text-[22px]">
               Accurate results. Respectful care. Local access.
             </p>
           </div>

@@ -41,7 +41,7 @@ export default function PatientTestimonialsSection() {
             Patient Stories
           </p>
 
-          <h2 className="mt-5 text-[38px] font-extrabold leading-tight tracking-[-0.03em] text-[#12383d] sm:text-[56px]">
+          <h2 className="mt-5 text-[34px] font-extrabold leading-tight text-[#12383d] sm:text-[56px]">
             What patients say about their care.
           </h2>
 
@@ -51,13 +51,13 @@ export default function PatientTestimonialsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid overflow-hidden rounded-[42px] bg-white shadow-[0_34px_90px_rgba(40,85,115,0.14)] lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mt-12 grid overflow-hidden rounded-[28px] bg-white shadow-[0_34px_90px_rgba(40,85,115,0.14)] sm:mt-16 sm:rounded-[42px] lg:grid-cols-[0.95fr_1.05fr]">
           <motion.div
             initial={{ opacity: 0, x: -26 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.6 }}
-            className="relative min-h-[520px] overflow-hidden bg-[#0b2f3a]"
+            className="relative min-h-[320px] overflow-hidden bg-[#0b2f3a] sm:min-h-[420px] lg:min-h-[520px]"
           >
             <img
               src="/patient-review.jpg"
@@ -67,7 +67,7 @@ export default function PatientTestimonialsSection() {
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#082f35]/70 via-transparent to-transparent" />
 
-            <div className="absolute left-6 top-6 rounded-[24px] border border-white/20 bg-white/15 p-5 text-white shadow-[0_20px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+            <div className="absolute left-4 top-4 rounded-[20px] border border-white/20 bg-white/15 p-4 text-white shadow-[0_20px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:left-6 sm:top-6 sm:rounded-[24px] sm:p-5">
               <div className="flex gap-1 text-[#46d7c8]">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star key={index} size={18} fill="currentColor" />
@@ -96,7 +96,7 @@ export default function PatientTestimonialsSection() {
             ))}
           </motion.div>
 
-          <div className="relative flex min-h-[520px] flex-col justify-center bg-[#eef9fc] px-7 py-10 sm:px-12 lg:px-14">
+          <div className="relative flex min-h-[420px] flex-col justify-center bg-[#eef9fc] px-5 py-8 sm:min-h-[520px] sm:px-12 sm:py-10 lg:px-14">
             <div className="absolute right-10 top-10 text-[#46d7c8]/20">
               <Quote size={90} fill="currentColor" />
             </div>
@@ -116,8 +116,8 @@ export default function PatientTestimonialsSection() {
                   className="h-[76px] w-[76px] rounded-full border-4 border-white object-cover shadow-[0_16px_38px_rgba(40,85,115,0.18)]"
                 />
 
-                <p className="mt-8 max-w-[620px] text-[22px] font-medium leading-10 text-[#285573]">
-                  “{active.text}”
+                <p className="mt-6 max-w-[620px] text-[18px] font-medium leading-8 text-[#285573] sm:mt-8 sm:text-[22px] sm:leading-10">
+                  "{active.text}"
                 </p>
 
                 <div className="mt-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">

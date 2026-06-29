@@ -12,22 +12,22 @@ export type RevealVariant = "dark" | "light" | "blue" | "teal" | "navy";
 
 export const serviceMenuItems: MenuItem[] = [
   { label: "X-Ray", href: "/services/x-ray" },
-  { label: "Ultrasound", href: "#services" },
-  { label: "Open MRI", href: "#mri-overview" },
-  { label: "3D Mammography", href: "#services" },
-  { label: "DEXA", href: "#services" },
-  { label: "CT Scans", href: "#services" },
-  { label: "3D Breast Ultrasound", href: "#services" },
+  { label: "Ultrasound", href: "/ultrasound"},
+  { label: "Open MRI", href: "/open-mri", },
+  { label: "3D Mammography", href: "/3d-mammography",},
+  { label: "DEXA Scan", href: "/dexa-scan", },
+  { label: "CT Scan", href: "/ct-scan", },
+  { label: "3D Breast Ultrasound", href: "/3d-breast-ultrasound", },
 ];
 
 export const preventiveMenuItems: MenuItem[] = [
-  { label: "Lung Cancer Screening", href: "#services" },
-  { label: "Cardiac Scoring", href: "#services" },
-  { label: "Whole-Body MRI", href: "#whole-body" },
+  { label: "Lung Cancer Screening", href: "/lung-cancer-screening", },
+  { label: "Cardiac Scoring", href: "/cardiac-scoring", },
+ 
 ];
 
 export const navItems: NavItem[] = [
-  { label: "About", href: "#trust" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "#services", children: serviceMenuItems },
   {
     label: "Preventive Screening Tests",
@@ -74,11 +74,6 @@ export const trustBlocks = [
     title: "Comprehensive Imaging In One Location",
     description:
       "Open MRI, CT, 3D mammography, 3D breast ultrasound, DEXA, X-Ray, Ultrasound, and Whole-Body MRI are coordinated through one independent center.",
-  },
-  {
-    title: "Built Around Patient Access",
-    description:
-      "Same-day reporting, STAT reads by request, walk-in availability, private parking, and extended Wednesday hours keep care moving.",
   },
 ];
 

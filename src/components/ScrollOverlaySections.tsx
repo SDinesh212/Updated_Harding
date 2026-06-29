@@ -92,7 +92,7 @@ function MriMachineOverlaySection() {
           Imaging Services
         </p>
 
-        <h2 className="mt-4 text-[30px] font-extrabold leading-tight tracking-[-0.03em] text-white sm:text-[38px]">
+        <h2 className="mt-4 text-[30px] font-extrabold leading-tight text-white sm:text-[38px]">
           Advanced diagnostics, shaped around comfort.
         </h2>
 
@@ -221,7 +221,7 @@ function TrustSection() {
   return (
     <section
       id="trust"
-      className="relative top-0 z-30 -mt-12 min-h-[calc(100vh-68px)] overflow-hidden px-4 pb-28 pt-24 text-[#12383d] sm:-mt-20 sm:px-6 sm:pb-32 sm:pt-28 lg:sticky lg:-mt-44 lg:pb-48 lg:pt-44"
+      className="trust-section relative top-0 z-30 -mt-12 min-h-[calc(100vh-68px)] overflow-hidden px-4 pb-28 pt-24 text-[#12383d] sm:-mt-20 sm:px-6 sm:pb-32 sm:pt-28 lg:sticky lg:-mt-40 lg:pb-32 lg:pt-32 xl:pb-40 xl:pt-40"
     >
       <svg
         className="absolute left-0 top-0 z-0 h-[150px] w-full"
@@ -237,17 +237,13 @@ function TrustSection() {
       <div className="absolute inset-x-0 bottom-0 top-[120px] z-0 bg-[#f3fbf5]" />
       <div className="absolute inset-x-0 bottom-0 top-[72px] z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(70,215,200,0.08),transparent_30%),radial-gradient(circle_at_88%_12%,rgba(121,201,139,0.11),transparent_34%)]" />
 
-      <div className="absolute bottom-0 left-0 top-[96px] h-full w-[34%] bg-[#eaf8ee]/70" />
-      <div className="absolute bottom-0 left-[29%] top-[96px] h-full w-[18%] skew-x-[-12deg] bg-white/45" />
-      <div className="absolute right-[-180px] bottom-[-180px] h-[500px] w-[500px] rounded-full border-[60px] border-[#dff4e6]/45" />
-
-      <div className="relative z-10 mx-auto grid max-w-[1280px] items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
+      <div className="trust-layout relative z-10 mx-auto grid max-w-[1280px] items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-12">
         <motion.div
           initial={{ opacity: 0, x: -34 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative"
+          className="trust-visual relative"
         >
           <div className="absolute -left-3 -top-3 h-full w-full rounded-[28px] bg-[#79c98b]/14 lg:-left-5 lg:-top-5 lg:rounded-[42px]" />
 
@@ -255,7 +251,7 @@ function TrustSection() {
             <img
               src="/radiology-center.jpg"
               alt="Radiology center patient care room"
-              className="aspect-[4/3.2] w-full rounded-[22px] object-cover sm:aspect-[16/10] lg:aspect-[4/4.25] lg:rounded-[32px]"
+              className="trust-photo aspect-[4/3.2] w-full rounded-[22px] object-cover sm:aspect-[16/10] lg:aspect-[4/3.85] lg:rounded-[32px] xl:aspect-[4/4.1]"
             />
 
             <div className="absolute inset-2.5 rounded-[22px] bg-gradient-to-t from-[#0f3c2b]/45 via-transparent to-transparent lg:inset-3 lg:rounded-[32px]" />
@@ -278,23 +274,23 @@ function TrustSection() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
-          <p className="inline-flex rounded-full bg-white/85 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.18em] text-[#2f9e63] shadow-sm lg:text-[13px] lg:tracking-[0.2em]">
+          <p className="trust-kicker inline-flex rounded-full bg-white/85 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.18em] text-[#2f9e63] shadow-sm lg:text-[13px] lg:tracking-[0.2em]">
             Radiology Center at Harding
           </p>
 
-          <h2 className="mt-5 text-[32px] font-extrabold leading-tight tracking-[-0.03em] text-[#12383d] sm:text-[44px] lg:mt-6 lg:text-[62px]">
+          <h2 className="trust-title mt-5 text-[32px] font-extrabold leading-tight text-[#12383d] sm:text-[44px] lg:mt-5 lg:text-[56px] xl:mt-6 xl:text-[62px]">
             Trusted care,
             <br />
             guided by clarity.
           </h2>
 
-          <p className="mt-5 max-w-[660px] text-[16px] leading-7 text-[#3f6651] lg:mt-6 lg:text-[17px] lg:leading-8">
+          <p className="trust-copy mt-5 max-w-[660px] text-[16px] leading-7 text-[#3f6651] lg:mt-4 lg:text-[16px] lg:leading-7 xl:mt-6 xl:text-[17px] xl:leading-8">
             Independent outpatient imaging serving Morris County with advanced
             technology, accessible scheduling, and a smoother experience from
             exam to results.
           </p>
 
-          <div className="mt-6 grid gap-3 sm:gap-4 lg:mt-8">
+          <div className="trust-list mt-6 grid gap-3 sm:gap-4 lg:mt-6 lg:gap-3 xl:mt-8 xl:gap-4">
             {trustBlocks.map((block, index) => (
               <motion.div
                 key={block.title}
@@ -302,20 +298,20 @@ function TrustSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="group relative overflow-hidden rounded-[20px] border border-white/80 bg-white/82 p-4 shadow-[0_14px_42px_rgba(31,82,57,0.09)] backdrop-blur transition hover:bg-white lg:rounded-[24px] lg:p-5 lg:shadow-[0_18px_54px_rgba(31,82,57,0.09)] lg:hover:-translate-y-1"
+                className="trust-card group relative overflow-hidden rounded-[20px] border border-white/80 bg-white/82 p-4 shadow-[0_14px_42px_rgba(31,82,57,0.09)] backdrop-blur transition hover:bg-white lg:rounded-[22px] lg:p-4 lg:shadow-[0_18px_54px_rgba(31,82,57,0.09)] lg:hover:-translate-y-1 xl:rounded-[24px] xl:p-5"
               >
                 <div className="absolute inset-y-0 left-0 w-[5px] bg-gradient-to-b from-[#46d7c8] to-[#79c98b]" />
 
                 <div className="flex gap-4 lg:gap-5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e4f7eb] text-[#2f9e63] lg:h-12 lg:w-12 lg:rounded-2xl">
+                  <div className="trust-card-icon flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e4f7eb] text-[#2f9e63] lg:h-11 lg:w-11 lg:rounded-xl xl:h-12 xl:w-12 xl:rounded-2xl">
                     <CircleCheck size={21} />
                   </div>
 
                   <div>
-                    <h3 className="text-[18px] font-extrabold leading-tight text-[#12383d] lg:text-[20px]">
+                    <h3 className="trust-card-title text-[18px] font-extrabold leading-tight text-[#12383d] lg:text-[18px] xl:text-[20px]">
                       {block.title}
                     </h3>
-                    <p className="mt-2 text-[14px] leading-6 text-[#3f6651] lg:text-[15px] lg:leading-7">
+                    <p className="trust-card-copy mt-2 text-[14px] leading-6 text-[#3f6651] lg:mt-1.5 lg:text-[14px] lg:leading-6 xl:mt-2 xl:text-[15px] xl:leading-7">
                       {block.description}
                     </p>
                   </div>
@@ -326,7 +322,7 @@ function TrustSection() {
 
           <a
             href="#contact"
-            className="group mt-7 inline-flex h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#12383d] px-7 text-[15px] font-bold text-white shadow-[0_18px_46px_rgba(18,56,61,0.2)] transition hover:bg-[#2f9e63] sm:w-auto lg:h-[54px] lg:hover:-translate-y-1"
+            className="trust-cta group mt-5 inline-flex h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#12383d] px-7 text-[15px] font-bold text-white shadow-[0_18px_46px_rgba(18,56,61,0.2)] transition hover:bg-[#2f9e63] sm:w-auto lg:mt-5 lg:h-[52px] lg:hover:-translate-y-1 xl:mt-6 xl:h-[54px]"
           >
             More About Us
             <ArrowRight
@@ -355,7 +351,7 @@ function WholeBodyMriSection() {
   return (
     <section
       id="whole-body"
-      className="sticky top-0 z-40 -mt-24 min-h-[calc(100vh-68px)] overflow-hidden px-4 pb-32 pt-36 text-white sm:px-6 lg:-mt-44 lg:pb-40 lg:pt-40"
+      className="sticky top-0 z-40 -mt-16 min-h-[calc(100vh-68px)] overflow-hidden px-4 pb-32 pt-36 text-white sm:px-6 lg:-mt-28 lg:pb-40 lg:pt-40"
     >
       <CurvedBackground color="#0b4f55" />
 
