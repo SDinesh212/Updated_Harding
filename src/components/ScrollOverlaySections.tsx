@@ -6,6 +6,7 @@ import {
   CircleCheck,
   HeartPulse,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import ContactSection from "./ContactSection";
 import DiagnosticExcellenceSection from "./DiagnosticExcellenceSection";
 import FooterSection from "./FooterSection";
@@ -49,6 +50,7 @@ function MriMachineOverlaySection() {
     {
       eyebrow: "Comfort-first imaging",
       title: "Open MRI",
+      href: "/open-mri",
       description:
         "High-field open MRI imaging in a more accessible, less claustrophobic setting for patients with anxiety, size concerns, or mobility limitations.",
       icon: Activity,
@@ -57,6 +59,7 @@ function MriMachineOverlaySection() {
     {
       eyebrow: "Dense breast clarity",
       title: "3D Breast Imaging",
+      href: "/3d-mammography",
       description:
         "3D mammography paired with automated breast ultrasound for detailed evaluation and stronger screening confidence.",
       icon: HeartPulse,
@@ -65,6 +68,7 @@ function MriMachineOverlaySection() {
     {
       eyebrow: "Fast diagnostic answers",
       title: "CT Scans",
+      href: "/ct-scan",
       description:
         "Advanced CT capability for lung screening, cardiac calcium scoring, and urgent diagnostic studies with STAT reporting available.",
       icon: Brain,
@@ -110,10 +114,10 @@ function MriMachineOverlaySection() {
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="pointer-events-none absolute left-1/2 top-[265px] z-10 w-[min(760px,162vw)] max-w-none -translate-x-1/2 opacity-100 drop-shadow-[0_34px_68px_rgba(70,215,200,0.26)] sm:top-[280px] sm:w-[min(930px,138vw)] md:top-[260px] md:w-[min(1120px,118vw)] lg:top-[-20px] lg:z-0 lg:w-[min(1500px,125vw)] lg:max-w-full lg:opacity-100 lg:drop-shadow-none"
+        className="pointer-events-none absolute left-1/2 top-[265px] z-10 w-[min(760px,185vw)] max-w-none -translate-x-1/2 opacity-100 drop-shadow-[0_34px_68px_rgba(70,215,200,0.26)] sm:top-[280px] sm:w-[min(930px,138vw)] md:top-[260px] md:w-[min(1120px,118vw)] lg:top-[-20px] lg:z-0 lg:w-[min(1500px,125vw)] lg:max-w-full lg:opacity-100 lg:drop-shadow-none"
       />
 
-      <div className="relative z-20 mx-auto mt-[355px] max-w-[1220px] sm:mt-[430px] md:mt-[500px] lg:mt-[540px]">
+      <div className="relative z-20 mx-auto mt-[clamp(292px,86vw,355px)] max-w-[1220px] sm:mt-[430px] md:mt-[500px] lg:mt-[540px]">
         <div className="grid gap-4 sm:gap-5 md:grid-cols-3 md:gap-6 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -130,7 +134,7 @@ function MriMachineOverlaySection() {
                   delay: index * 0.08,
                   ease: "easeOut",
                 }}
-                className="group relative overflow-hidden rounded-[24px] border border-white/14 bg-[#071d24]/88 p-5 shadow-[0_24px_70px_rgba(0,0,0,0.34)] backdrop-blur-3xl transition-all duration-500 hover:bg-[#092832]/95 sm:p-6 md:p-5 lg:rounded-[34px] lg:bg-[#071d24]/92 lg:p-8 lg:shadow-none lg:hover:-translate-y-4 lg:hover:shadow-[0_60px_120px_rgba(0,0,0,0.48)]"
+                className="interactive-shine group relative overflow-hidden rounded-[24px] border border-white/14 bg-[#071d24]/88 p-5 shadow-[0_24px_70px_rgba(0,0,0,0.34)] backdrop-blur-3xl transition-all duration-500 hover:bg-[#092832]/95 sm:p-6 md:p-5 lg:rounded-[34px] lg:bg-[#071d24]/92 lg:p-8 lg:shadow-none lg:hover:-translate-y-4 lg:hover:shadow-[0_60px_120px_rgba(0,0,0,0.48)]"
               >
                 <div
                   className="absolute left-5 right-5 top-0 h-[4px] rounded-full shadow-[0_0_30px_rgba(70,215,200,0.55)] lg:left-8 lg:right-8"
@@ -181,7 +185,8 @@ function MriMachineOverlaySection() {
                   {service.description}
                 </p>
 
-                <div
+                <Link
+                  to={service.href}
                   className="relative z-10 mt-6 inline-flex w-full items-center justify-between gap-3 rounded-full border px-4 py-2.5 text-[14px] font-bold transition group-hover:text-[#062329] sm:w-auto sm:justify-center lg:mt-10 lg:px-5 lg:py-3 lg:text-[15px]"
                   style={{
                     borderColor: `${service.accent}55`,
@@ -194,7 +199,7 @@ function MriMachineOverlaySection() {
                     size={16}
                     className="transition group-hover:translate-x-1"
                   />
-                </div>
+                </Link>
               </motion.article>
             );
           })}
@@ -320,8 +325,8 @@ function TrustSection() {
             ))}
           </div>
 
-          <a
-            href="#contact"
+          <Link
+            to="/about"
             className="trust-cta group mt-5 inline-flex h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#12383d] px-7 text-[15px] font-bold text-white shadow-[0_18px_46px_rgba(18,56,61,0.2)] transition hover:bg-[#2f9e63] sm:w-auto lg:mt-5 lg:h-[52px] lg:hover:-translate-y-1 xl:mt-6 xl:h-[54px]"
           >
             More About Us
@@ -329,7 +334,7 @@ function TrustSection() {
               size={17}
               className="transition group-hover:translate-x-1"
             />
-          </a>
+          </Link>
         </motion.div>
       </div>
 
@@ -405,8 +410,8 @@ function WholeBodyMriSection() {
             ))}
           </div>
 
-          <a
-            href="#contact"
+          <Link
+            to="/appointment"
             className="group mt-9 inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-[#7ff0e5] px-6 text-[15px] font-bold text-[#07303c] shadow-[0_0_40px_rgba(127,240,229,0.28)] transition hover:-translate-y-1 hover:bg-white"
           >
             Schedule a Consultation
@@ -414,7 +419,7 @@ function WholeBodyMriSection() {
               size={17}
               className="transition group-hover:translate-x-1"
             />
-          </a>
+          </Link>
         </motion.div>
 
         <motion.div

@@ -59,9 +59,9 @@ export default function DiagnosticExcellenceSection() {
               return (
                 <div
                   key={item.label}
-                  className="rounded-[24px] border border-white/80 bg-white/75 p-5 shadow-[0_18px_50px_rgba(40,85,115,0.1)] "
+                  className="service-card-hover rounded-[24px] border border-white/80 bg-white/75 p-5 shadow-[0_18px_50px_rgba(40,85,115,0.1)]"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#dff8f6] text-[#1e9c92]">
+                  <div className="service-card-icon mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#dff8f6] text-[#1e9c92]">
                     <Icon size={22} />
                   </div>
                   <p className="text-[30px] font-extrabold text-[#12383d]">
@@ -85,7 +85,7 @@ export default function DiagnosticExcellenceSection() {
         >
           
 
-          <div className="relative overflow-hidden rounded-[28px] bg-[#081f27] p-2.5 sm:rounded-[42px] sm:p-3">
+          <div className="service-video-shell interactive-shine relative overflow-hidden rounded-[28px] bg-[#081f27] p-2.5 sm:rounded-[42px] sm:p-3">
             <div className="relative aspect-video overflow-hidden rounded-[22px] sm:rounded-[32px]">
               <iframe
                 src="https://www.youtube.com/embed/eDTjxS5OKh0?si=Ct4bWu4Ho-m_1--6"
@@ -98,7 +98,7 @@ export default function DiagnosticExcellenceSection() {
 
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#081f27]/40 via-transparent to-transparent" />
 
-              <div className="pointer-events-none absolute left-5 top-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#46d7c8] text-[#082f35] shadow-[0_0_28px_rgba(70,215,200,0.42)]">
+              <div className="pulse-soft pointer-events-none absolute left-5 top-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#46d7c8] text-[#082f35] shadow-[0_0_28px_rgba(70,215,200,0.42)]">
                 <Play size={20} fill="currentColor" />
               </div>
             </div>

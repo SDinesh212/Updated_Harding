@@ -24,7 +24,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.65 }}
-          className="overflow-hidden rounded-lg border border-white bg-white shadow-[0_28px_76px_rgba(23,56,59,0.12)]"
+          className="glow-hover image-hover-frame relative overflow-hidden rounded-lg border border-white bg-white shadow-[0_28px_76px_rgba(23,56,59,0.12)]"
         >
           <iframe
             title="Radiology Center at Harding map"
@@ -40,7 +40,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.65 }}
-          className="rounded-lg border border-white bg-white/[0.78] p-6 shadow-[0_28px_76px_rgba(23,56,59,0.1)] backdrop-blur sm:p-8 lg:p-10"
+          className="glow-hover rounded-lg border border-white bg-white/[0.78] p-6 shadow-[0_28px_76px_rgba(23,56,59,0.1)] backdrop-blur sm:p-8 lg:p-10"
         >
           <p className="text-[14px] font-bold text-[#46a89e]">Contact us</p>
           <h2 className="mt-3 text-[38px] font-extrabold text-[#285573] sm:text-[56px]">
@@ -98,8 +98,8 @@ function Info({
   children: ReactNode;
 }) {
   return (
-    <div className="flex gap-4">
-      <div className="mt-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e5faf8] text-[#158f87]">
+    <div className="contact-info-row flex gap-4 rounded-[18px] p-2 -m-2">
+      <div className="contact-info-icon mt-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e5faf8] text-[#158f87]">
         {icon}
       </div>
       <div>

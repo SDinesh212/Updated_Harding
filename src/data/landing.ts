@@ -34,10 +34,10 @@ export const navItems: NavItem[] = [
     href: "#mri-reveal",
     children: preventiveMenuItems,
   },
-  { label: "Whole Body MRI", href: "#whole-body" },
-  { label: "Appointment", href: "#contact" },
-  { label: "Make Payment", href: "#contact" },
-  { label: "Contact us", href: "#contact" },
+  { label: "Whole Body MRI", href: "/whole-body-mri" },
+  { label: "Appointment", href: "/appointment" },
+  { label: "Make Payment", href: "/make-payment" },
+  { label: "Contact us", href: "/contact" },
 ];
 
 export const mriFeatureCards = [

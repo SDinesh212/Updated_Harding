@@ -99,7 +99,7 @@ export default function OpenMRIPage() {
 
               <div className="mt-9 flex flex-wrap items-center gap-5">
                 <a
-                  href="#contact"
+                  href="/appointment"
                   className="group inline-flex items-center gap-3 rounded-full bg-[#063b3b] px-7 py-4 text-sm font-black text-white shadow-xl shadow-emerald-900/20 transition hover:-translate-y-1 hover:bg-emerald-600"
                 >
                   Book Appointment
@@ -138,7 +138,7 @@ export default function OpenMRIPage() {
 
             <div className="relative hidden lg:block">
               <div className="absolute -inset-8 rounded-[55px] bg-emerald-300/20 blur-3xl" />
-              <div className="relative rounded-[48px] border border-emerald-300/60 bg-white/70 p-4 shadow-2xl shadow-emerald-900/15 backdrop-blur">
+              <div className=" service-float relative rounded-[48px] border border-emerald-300/60 bg-white/70 p-4 shadow-2xl shadow-emerald-900/15 backdrop-blur">
                 <img
                   src="/images/open-mri-hero.jpg"
                   alt="Open MRI scan room"
@@ -167,7 +167,7 @@ export default function OpenMRIPage() {
             <img
               src="/images/open-mri-machine.png"
               alt="Open MRI machine"
-              className="h-[430px] w-full rounded-[42px] object-contain p-8 shadow-2xl shadow-emerald-900/10"
+              className="h-[430px] w-full rounded-[42px] bg-[#f4fffb]  object-contain p-8 shadow-2xl shadow-emerald-900/10"
             />
 
             <div>

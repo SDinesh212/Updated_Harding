@@ -5,15 +5,16 @@ import {
   FaPinterestP,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { towns } from "../data/landing";
 
 const footerLinks = [
-  "About",
-  "Preventive Screening Tests",
-  "Make Payment",
-  "Appointment",
-  "Women Imaging",
-  "Contact us",
+  { label: "About", href: "/about" },
+  { label: "Preventive Screening Tests", href: "/lung-cancer-screening" },
+  { label: "Make Payment", href: "/make-payment" },
+  { label: "Appointment", href: "/appointment" },
+  { label: "Women Imaging", href: "/3d-mammography" },
+  { label: "Contact us", href: "/contact" },
 ];
 
 const socialIcons = [FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaPinterestP];
@@ -51,13 +52,13 @@ export default function FooterSection() {
 
             <div className="mt-8 grid max-w-[760px] grid-cols-2 gap-x-8 gap-y-3 text-[14px] text-white/78 sm:grid-cols-3 lg:grid-cols-4">
               {towns.map((town) => (
-                <a
+                <Link
                   key={town}
-                  href="#contact"
-                  className="transition hover:text-[#46d7c8]"
+                  to="/contact"
+                  className="footer-link transition hover:text-[#46d7c8]"
                 >
                   {town}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -67,13 +68,13 @@ export default function FooterSection() {
 
             <div className="mt-7 grid grid-cols-2 gap-x-8 gap-y-4 text-[15px] font-semibold text-white/78">
               {footerLinks.map((link) => (
-                <a
-                  key={link}
-                  href="#contact"
-                  className="transition hover:text-[#46d7c8]"
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="footer-link transition hover:text-[#46d7c8]"
                 >
-                  {link}
-                </a>
+                  {link.label}
+                </Link>
               ))}
             </div>
 
@@ -84,14 +85,14 @@ export default function FooterSection() {
 
             <div className="mt-9 flex flex-wrap gap-4">
               {socialIcons.map((Icon, index) => (
-                <a
+                <Link
                   key={index}
-                  href="#contact"
-                  aria-label="Social profile"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/[0.07] text-[18px] transition hover:-translate-y-1 hover:border-[#46d7c8] hover:text-[#46d7c8]"
+                  to="/contact"
+                  aria-label="Contact Radiology Center at Harding"
+                  className="interactive-shine relative inline-flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-white/14 bg-white/[0.07] text-[18px] transition hover:-translate-y-1 hover:border-[#46d7c8] hover:text-[#46d7c8]"
                 >
                   <Icon />
-                </a>
+                </Link>
               ))}
             </div>
           </div>

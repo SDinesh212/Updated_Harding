@@ -100,7 +100,7 @@ export default function MammographyPage() {
 
               <div className="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:items-center sm:gap-5">
                 <a
-                  href="#contact"
+                  href="/appointment"
                   className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#063b3b] px-7 py-4 text-sm font-black text-white shadow-xl shadow-emerald-900/20 transition hover:-translate-y-1 hover:bg-emerald-600 sm:w-auto"
                 >
                   Book Appointment
@@ -168,7 +168,7 @@ export default function MammographyPage() {
             <img
               src="/images/mammography-machine.png"
               alt="3D mammography machine"
-              className="h-64 w-full rounded-[28px] object-contain p-4 shadow-2xl shadow-emerald-900/10 transition duration-500 hover:scale-[1.02] sm:h-80 sm:rounded-[42px] sm:p-8 md:h-[380px] lg:h-[430px]"
+              className="h-64 w-full rounded-[28px] bg-[#f4fffb] object-contain p-4 shadow-2xl shadow-emerald-900/10 transition duration-500 hover:scale-[1.02] sm:h-80 sm:rounded-[42px] sm:p-8 md:h-[380px] lg:h-[430px]"
             />
 
             <div>
@@ -288,7 +288,7 @@ export default function MammographyPage() {
               </div>
 
               <a
-                href="#contact"
+                href="/appointment"
                 className="mt-9 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#063b3b] px-7 py-4 text-sm font-black text-white shadow-xl transition hover:-translate-y-1 hover:bg-emerald-600 sm:w-auto"
               >
                 Schedule Screening

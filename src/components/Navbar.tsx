@@ -138,7 +138,7 @@ export default function Navbar() {
     <header className="fixed left-0 top-0 z-[100] w-full px-4 pt-3 sm:px-6">
       <nav
         aria-label="Primary navigation"
-        className={`mx-auto flex h-[74px] max-w-[1360px] items-center justify-between gap-6 rounded-full px-5 transition-all duration-300 lg:px-7 ${
+        className={`mx-auto flex h-[82px] max-w-[1360px] items-center justify-between gap-4 rounded-full px-4 transition-all duration-300 lg:gap-6 lg:px-6 ${
           isScrolled || isMenuOpen
             ? "bg-[#082f35]/96 shadow-[0_18px_54px_rgba(5,31,39,0.28)] backdrop-blur-xl"
             : "border border-white/70 bg-white/42 shadow-[0_18px_50px_rgba(40,85,115,0.12)] backdrop-blur-xl"
@@ -147,15 +147,15 @@ export default function Navbar() {
         <Link
           to="/"
           aria-label="Radiology Center at Harding home"
-          className={`inline-flex shrink-0 items-center rounded-full px-5 py-3 transition-all duration-300 ${
+          className={`inline-flex h-[64px] w-[132px] shrink-0 items-center justify-center rounded-[20px] border border-white/80 bg-white px-2 py-1 transition-all duration-300 shadow-[0_12px_32px_rgba(5,31,39,0.16)] sm:h-[68px] sm:w-[154px] lg:w-[168px] ${
             isScrolled || isMenuOpen
-              ? "bg-transparent"
-              : "bg-[#082f35] shadow-[0_18px_44px_rgba(5,31,39,0.24)]"
+              ? "shadow-[0_14px_36px_rgba(0,0,0,0.22)]"
+              : "shadow-[0_18px_44px_rgba(5,31,39,0.18)]"
           }`}>
           <img
-            src="/logo.png"
+            src="/logo1.png"
             alt="Radiology Center at Harding"
-            className="h-15 w-[170px] object-contain sm:w-[210px]"
+            className="h-full w-full object-contain"
           />
         </Link>
 
@@ -169,12 +169,12 @@ export default function Navbar() {
           ))}
         </div>
 
-        <a
-          href="#contact"
+        <Link
+          to="/appointment"
           className="hidden h-[52px] items-center justify-center rounded-full bg-[#143f35] px-5 text-[15px] font-extrabold text-white shadow-[0_16px_34px_rgba(19,183,207,0.22)] transition hover:-translate-y-1 hover:shadow-[0_20px_44px_rgba(19,183,207,0.28)] lg:inline-flex"
         >
           Book now
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -244,13 +244,13 @@ export default function Navbar() {
                 )}
               </div>
 
-              <a
-                href="#contact"
+              <Link
+                to="/appointment"
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-5 inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-[#46d7c8] to-[#13b7cf] px-6 text-[15px] font-extrabold text-[#062f3f]"
               >
-                Join now
-              </a>
+                Book now
+              </Link>
             </motion.div>
           </motion.div>
         )}

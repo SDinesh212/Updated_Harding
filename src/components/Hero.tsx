@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Target,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -95,12 +96,12 @@ export default function Hero() {
             single session.
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            to="/appointment"
             className="mt-8 inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-xl bg-[#143f35] px-6 text-center text-[15px] font-bold text-white shadow-[0_22px_50px_rgba(7,148,84,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#0f3028] hover:shadow-[0_28px_70px_rgba(7,148,84,0.34)] sm:mt-10 sm:w-auto sm:min-h-[62px] sm:px-8 sm:text-[17px]"
           >
             Book Your Appointment
-          </a>
+          </Link>
         </motion.div>
       </div>
 

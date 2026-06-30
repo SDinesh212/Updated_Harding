@@ -96,7 +96,7 @@ export default function AboutPage() {
 
               <div className="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:items-center sm:gap-5">
                 <a
-                  href="#contact"
+                  href="/appointment"
                   className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#063b3b] px-7 py-4 text-sm font-black text-white shadow-2xl shadow-[#063b3b]/20 transition hover:-translate-y-1 hover:bg-[#0a9b8c] sm:w-auto"
                 >
                   Book an Appointment
@@ -350,7 +350,7 @@ export default function AboutPage() {
             </p>
 
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-3 rounded-2xl border border-[#0a9b8c] bg-white px-7 py-4 text-sm font-black text-[#062f35] transition hover:-translate-y-1 hover:bg-[#073b3b] hover:text-white"
             >
               Partner With Us

@@ -51,7 +51,7 @@ function Pill({
 }) {
   return (
     <span
-      className={`shrink-0 rounded-full px-6 py-4 text-[15px] font-bold shadow-[0_18px_42px_rgba(23,56,59,0.1)] sm:text-[16px] ${pillColors[variant]}`}
+      className={`interactive-pill shrink-0 rounded-full px-6 py-4 text-[15px] font-bold shadow-[0_18px_42px_rgba(23,56,59,0.1)] sm:text-[16px] ${pillColors[variant]}`}
     >
       {children}
     </span>
