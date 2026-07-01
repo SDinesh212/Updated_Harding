@@ -36,7 +36,7 @@ export const navItems: NavItem[] = [
   },
   { label: "Whole Body MRI", href: "/whole-body-mri" },
   { label: "Appointment", href: "/appointment" },
-  { label: "Make Payment", href: "/make-payment" },
+  { label: "Make Payment", href: "https://pay.instamed.com/Form/PaymentPortal/Default?id=HARDINGRADIO" },
   { label: "Contact us", href: "/contact" },
 ];
 

@@ -25,12 +25,12 @@ function CurvedBackground({ color }: { color: string }) {
     <>
       <svg
         className="absolute left-0 top-0 z-0 h-[130px] w-full"
-        viewBox="0 0 1440 130"
+        viewBox="0 0 1440 150"
         preserveAspectRatio="none"
       >
         <path
           fill={color}
-          d="M0,88 C260,24 515,24 760,44 C1010,65 1228,42 1440,8 L1440,130 L0,130 Z"
+          d="M0,150 C360,18 1080,18 1440,150 L1440,150 L0,150 Z"
         />
       </svg>
 
@@ -208,12 +208,12 @@ function MriMachineOverlaySection() {
 
       <svg
         className="absolute bottom-0 left-0 z-10 h-[90px] w-full sm:h-[120px] lg:h-[150px]"
-        viewBox="0 0 1440 120"
+        viewBox="0 0 1440 150"
         preserveAspectRatio="none"
       >
         <path
           fill="#dcecf4"
-          d="M0,98 C250,42 520,44 760,63 C1020,84 1240,58 1440,18 L1440,120 L0,120 Z"
+          d="M0,150 C360,18 1080,18 1440,150 L1440,150 L0,150 Z"
         />
       </svg>
     </section>
@@ -235,7 +235,7 @@ function TrustSection() {
       >
         <path
           fill="#f3fbf5"
-          d="M0,88 C250,22 510,26 760,54 C1005,82 1208,46 1440,10 L1440,150 L0,150 Z"
+          d="M0,150 C360,18 1080,18 1440,150 L1440,150 L0,150 Z"
         />
       </svg>
 
@@ -345,7 +345,7 @@ function TrustSection() {
       >
         <path
           fill="#0b4f55"
-          d="M0,96 C260,44 520,42 760,68 C1010,96 1220,64 1440,24 L1440,130 L0,130 Z"
+          d="M0,130 C360,16 1080,16 1440,130 L1440,130 L0,130 Z"
         />
       </svg>
     </section>
