@@ -45,60 +45,57 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        
         className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
       >
         <source src="/videos/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      {/* Readability overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#f3fbf5]/95 via-[#f3fbf5]/78 to-[#f3fbf5]/12 backdrop-blur-[0.1px]" />
+      {/* Dark + green overlay like reference */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#eef8f1]/90 via-[#eef8f1]/55 to-black/35" />
+      <div className="absolute inset-0 z-[2] bg-black/10" />
 
-      {/* Soft green depth */}
+      {/* Soft animated depth */}
       <motion.div
         animate={{ scale: [1, 1.15, 1], y: [0, -25, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -left-48 top-32 z-[2] h-[520px] w-[520px] rounded-full  blur-3xl"
+        className="absolute -left-48 top-32 z-[3] h-[520px] w-[520px] rounded-full bg-[#daf4e3]/25 blur-3xl"
       />
 
       <motion.div
         animate={{ scale: [1, 1.18, 1], x: [0, -25, 0] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -right-52 top-10 z-[2] h-[620px] w-[620px] rounded-full bg-[#e7f8ec]/28 blur-3xl"
+        className="absolute -right-52 top-10 z-[3] h-[620px] w-[620px] rounded-full bg-[#e7f8ec]/20 blur-3xl"
       />
 
-      <div className="relative z-10 mx-auto grid min-h-[calc(100svh-112px)] max-w-[1360px] items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
-        {/* Content */}
+      {/* Content */}
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-112px)] max-w-[1360px] items-center">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75 }}
-          className="max-w-[690px]"
+          className="max-w-[1050px]"
         >
-          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-[#a6dfb8] bg-white/60 px-4 py-2.5 text-[12px] font-extrabold uppercase tracking-wide text-[#0d9b5d] shadow-sm backdrop-blur-xl sm:mb-7 sm:gap-3 sm:px-5 sm:text-[13px]">
+          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-[#a6dfb8] bg-white/65 px-4 py-2.5 text-[12px] font-extrabold uppercase tracking-wide text-[#0d9b5d] shadow-sm backdrop-blur-xl sm:mb-7 sm:gap-3 sm:px-5 sm:text-[13px]">
             <ScanLine size={18} />
             Whole-Body MRI
           </div>
 
-          <h1 className="font-serif text-[36px] font-black leading-[1.18] text-[#143f35] sm:text-[52px] sm:leading-[1.2] lg:text-[52px]">
-            <span className="block">Preventive Health,</span>
-            <span className="block">Reimagined With</span>
-
-            <span className="block bg-gradient-to-r from-[#0c9e5f] via-[#14b873] to-[#42c98e] bg-clip-text text-transparent">
-              Whole-Body MRI -
-            </span>
-
-            <span className="block">now available at Harding.</span>
+          <h1 className="max-w-[1080px] font-serif text-[38px] font-black leading-[1.16] tracking-[-0.04em] text-[#143f35] sm:text-[54px] lg:text-[66px]">
+            Preventive Health, Reimagined with{" "}
+            <span className="bg-gradient-to-r from-[#0c9e5f] via-[#14b873] to-[#42c98e] bg-clip-text text-transparent">
+              Whole-Body MRI
+            </span>{" "}
+            — now available at Harding.
           </h1>
 
-          <p className="mt-6 max-w-[560px] text-[16px] leading-7 text-[#3e665c] sm:mt-7 sm:text-[20px] sm:leading-[1.8]">
+          <p className="mt-8 max-w-[820px] text-[18px] leading-[1.7] text-[#315f55] sm:text-[22px]">
             A radiation-free, non-invasive scan covering brain to pelvis in a
             single session.
           </p>
 
           <Link
             to="/appointment"
-            className="mt-8 inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-xl bg-[#143f35] px-6 text-center text-[15px] font-bold text-white shadow-[0_22px_50px_rgba(7,148,84,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#0f3028] hover:shadow-[0_28px_70px_rgba(7,148,84,0.34)] sm:mt-10 sm:w-auto sm:min-h-[62px] sm:px-8 sm:text-[17px]"
+            className="mt-10 inline-flex h-[60px] items-center justify-center rounded-lg bg-[#143f35] px-10 text-[17px] font-bold text-white shadow-[0_20px_50px_rgba(20,63,53,0.25)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0d2d25]"
           >
             Book Your Appointment
           </Link>
@@ -142,13 +139,13 @@ export default function Hero() {
       </motion.div>
 
       <svg
-        className="absolute bottom-0 left-0 z-0 h-[140px] w-full"
+        className="absolute bottom-0 left-0 z-0 h-[56px] w-full sm:h-[84px] lg:h-[140px]"
         viewBox="0 0 1440 140"
         preserveAspectRatio="none"
       >
         <path
           fill="#ffffff"
-          d="M0,92 C260,128 480,125 720,88 C940,54 1160,58 1440,22 L1440,140 L0,140 Z"
+          d="M0,68 C360,38 1080,38 1440,68 L1440,140 L0,140 Z"
         />
       </svg>
     </section>

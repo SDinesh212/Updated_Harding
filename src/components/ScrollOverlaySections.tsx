@@ -24,18 +24,18 @@ function CurvedBackground({ color }: { color: string }) {
   return (
     <>
       <svg
-        className="absolute left-0 top-0 z-0 h-[130px] w-full"
+        className="absolute left-0 top-0 z-0 h-[84px] w-full sm:h-[100px] lg:h-[130px]"
         viewBox="0 0 1440 150"
         preserveAspectRatio="none"
       >
         <path
           fill={color}
-          d="M0,150 C360,18 1080,18 1440,150 L1440,150 L0,150 Z"
+          d="M0,150 C360,86 1080,86 1440,150 L1440,150 L0,150 Z"
         />
       </svg>
 
       <div
-        className="absolute inset-x-0 bottom-0 top-[120px] z-0"
+        className="absolute inset-x-0 bottom-0 top-[72px] z-0 sm:top-[94px] lg:top-[120px]"
         style={{ backgroundColor: color }}
       />
     </>
@@ -207,13 +207,13 @@ function MriMachineOverlaySection() {
       </div>
 
       <svg
-        className="absolute bottom-0 left-0 z-10 h-[90px] w-full sm:h-[120px] lg:h-[150px]"
+        className="absolute bottom-0 left-0 z-10 h-[72px] w-full sm:h-[92px] lg:h-[130px]"
         viewBox="0 0 1440 150"
         preserveAspectRatio="none"
       >
         <path
           fill="#dcecf4"
-          d="M0,150 C360,18 1080,18 1440,150 L1440,150 L0,150 Z"
+          d="M0,150 C360,86 1080,86 1440,150 L1440,150 L0,150 Z"
         />
       </svg>
     </section>
