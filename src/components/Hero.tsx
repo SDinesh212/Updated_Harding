@@ -7,6 +7,7 @@ import {
   Target,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import CurveDivider from "./CurveDivider";
 
 const features = [
   {
@@ -138,16 +139,10 @@ export default function Hero() {
         })}
       </motion.div>
 
-      <svg
-        className="absolute bottom-0 left-0 z-0 h-[56px] w-full sm:h-[84px] lg:h-[140px]"
-        viewBox="0 0 1440 140"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill="#ffffff"
-          d="M0,68 C360,38 1080,38 1440,68 L1440,140 L0,140 Z"
-        />
-      </svg>
+      <CurveDivider
+        fill="#ffffff"
+        className="absolute bottom-0 left-0 z-0 h-[74px] w-full sm:h-[108px] lg:h-[168px]"
+      />
     </section>
   );
 }

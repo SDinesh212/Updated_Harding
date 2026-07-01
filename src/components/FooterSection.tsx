@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { towns } from "../data/landing";
+import CurveDivider from "./CurveDivider";
 
 const footerLinks = [
   { label: "About", href: "/about" },
@@ -23,17 +24,10 @@ export default function FooterSection() {
   return (
     <>
       <div className="-mb-[1px] w-full overflow-hidden bg-[#f4f7f6] leading-none">
-        <svg
-          viewBox="0 0 1440 150"
-          className="block h-[92px] w-full sm:h-[130px]"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path
-            fill="#17383b"
-            d="M0,150 C360,18 1080,18 1440,150 L1440,150 L0,150 Z"
-          />
-        </svg>
+        <CurveDivider
+          fill="#17383b"
+          className="block h-[108px] w-full sm:h-[148px]"
+        />
       </div>
 
       <footer className="relative overflow-hidden bg-[#17383b] px-4 pb-8 pt-10 text-white sm:px-6 lg:pt-14">

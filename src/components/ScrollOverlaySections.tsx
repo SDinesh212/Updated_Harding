@@ -13,6 +13,7 @@ import FooterSection from "./FooterSection";
 import MriRevealSection from "./MriRevealSection";
 import PatientTestimonialsSection from "./PatientTestimonialsSection";
 import RadiologyServicesSection from "./RadiologyServicesSection";
+import CurveDivider from "./CurveDivider";
 import { timelinePoints, trustBlocks } from "../data/landing";
 
 const fadeUp = {
@@ -23,19 +24,13 @@ const fadeUp = {
 function CurvedBackground({ color }: { color: string }) {
   return (
     <>
-      <svg
-        className="absolute left-0 top-0 z-0 h-[84px] w-full sm:h-[100px] lg:h-[130px]"
-        viewBox="0 0 1440 150"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill={color}
-          d="M0,150 C360,86 1080,86 1440,150 L1440,150 L0,150 Z"
-        />
-      </svg>
+      <CurveDivider
+        fill={color}
+        className="absolute left-0 top-0 z-0 h-[112px] w-full sm:h-[132px] lg:h-[168px]"
+      />
 
       <div
-        className="absolute inset-x-0 bottom-0 top-[72px] z-0 sm:top-[94px] lg:top-[120px]"
+        className="absolute inset-x-0 bottom-0 top-[82px] z-0 sm:top-[98px] lg:top-[126px]"
         style={{ backgroundColor: color }}
       />
     </>
@@ -206,16 +201,10 @@ function MriMachineOverlaySection() {
         </div>
       </div>
 
-      <svg
-        className="absolute bottom-0 left-0 z-10 h-[72px] w-full sm:h-[92px] lg:h-[130px]"
-        viewBox="0 0 1440 150"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill="#dcecf4"
-          d="M0,150 C360,86 1080,86 1440,150 L1440,150 L0,150 Z"
-        />
-      </svg>
+      <CurveDivider
+        fill="#dcecf4"
+        className="absolute bottom-0 left-0 z-10 h-[86px] w-full sm:h-[112px] lg:h-[160px]"
+      />
     </section>
   );
 }
@@ -228,19 +217,8 @@ function TrustSection() {
       id="trust"
       className="trust-section relative top-0 z-30 -mt-12 min-h-[calc(100vh-68px)] overflow-hidden px-4 pb-28 pt-24 text-[#12383d] sm:-mt-20 sm:px-6 sm:pb-32 sm:pt-28 lg:sticky lg:-mt-40 lg:pb-32 lg:pt-32 xl:pb-40 xl:pt-40"
     >
-      <svg
-        className="absolute left-0 top-0 z-0 h-[150px] w-full"
-        viewBox="0 0 1440 150"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill="#f3fbf5"
-          d="M0,150 C360,18 1080,18 1440,150 L1440,150 L0,150 Z"
-        />
-      </svg>
-
-      <div className="absolute inset-x-0 bottom-0 top-[120px] z-0 bg-[#f3fbf5]" />
-      <div className="absolute inset-x-0 bottom-0 top-[72px] z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(70,215,200,0.08),transparent_30%),radial-gradient(circle_at_88%_12%,rgba(121,201,139,0.11),transparent_34%)]" />
+      <div className="absolute inset-0 z-0 bg-[#f3fbf5]" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(70,215,200,0.08),transparent_30%),radial-gradient(circle_at_88%_12%,rgba(121,201,139,0.11),transparent_34%)]" />
 
       <div className="trust-layout relative z-10 mx-auto grid max-w-[1280px] items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-12">
         <motion.div
@@ -338,16 +316,6 @@ function TrustSection() {
         </motion.div>
       </div>
 
-      <svg
-        className="absolute bottom-0 left-0 z-20 h-[130px] w-full"
-        viewBox="0 0 1440 130"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill="#0b4f55"
-          d="M0,130 C360,16 1080,16 1440,130 L1440,130 L0,130 Z"
-        />
-      </svg>
     </section>
   );
 }
