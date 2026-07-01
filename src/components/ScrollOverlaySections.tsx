@@ -201,10 +201,7 @@ function MriMachineOverlaySection() {
         </div>
       </div>
 
-      <CurveDivider
-        fill="#dcecf4"
-        className="absolute bottom-0 left-0 z-10 h-[86px] w-full sm:h-[112px] lg:h-[160px]"
-      />
+      
     </section>
   );
 }
@@ -215,7 +212,7 @@ function TrustSection() {
   return (
     <section
       id="trust"
-      className="trust-section relative top-0 z-30 -mt-12 min-h-[calc(100vh-68px)] overflow-hidden px-4 pb-28 pt-24 text-[#12383d] sm:-mt-20 sm:px-6 sm:pb-32 sm:pt-28 lg:sticky lg:-mt-40 lg:pb-32 lg:pt-32 xl:pb-40 xl:pt-40"
+      className="trust-section relative top-0 z-30 mt-16 min-h-[calc(100vh-68px)] overflow-hidden px-4 pb-28 pt-24 text-[#12383d] sm:mt-20 sm:px-6 sm:pb-32 sm:pt-28 lg:sticky lg:mt-24 lg:pb-32 lg:pt-32 xl:mt-28 xl:pb-40 xl:pt-40"
     >
       <div className="absolute inset-0 z-0 bg-[#f3fbf5]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(70,215,200,0.08),transparent_30%),radial-gradient(circle_at_88%_12%,rgba(121,201,139,0.11),transparent_34%)]" />
